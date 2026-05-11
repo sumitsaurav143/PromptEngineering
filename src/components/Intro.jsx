@@ -4,6 +4,12 @@ import { ChevronDown, Play, BookOpen, Zap, Code, Users } from 'lucide-react';
 import Video1 from './Video1';
 import Video2 from './Video2';
 import Video3 from './Video3';
+import Video4 from './Video4';
+import Video5 from './Video5';
+import Video6 from './Video6';
+import Video7 from './Video7';
+import Video8 from './Video8';
+import Video9 from './Video9';
 
 const Intro = () => {
   const [expandedSection, setExpandedSection] = useState(0);
@@ -152,6 +158,18 @@ const Intro = () => {
             <Video2 />
           ) : showVideoPage === 3 ? (
             <Video3 />
+          ) : showVideoPage === 4 ? (
+            <Video4 />
+          ) : showVideoPage === 5 ? (
+            <Video5 />
+          ) : showVideoPage === 6 ? (
+            <Video6 />
+          ) : showVideoPage === 7 ? (
+            <Video7 />
+          ) : showVideoPage === 8 ? (
+            <Video8 />
+          ) : showVideoPage === 9 ? (
+            <Video9 />
           ) : (
             <div className="coming-soon">
               <h1>Video {showVideoPage} Coming Soon!</h1>

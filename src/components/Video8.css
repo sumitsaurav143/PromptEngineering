@@ -1,0 +1,182 @@
+.video8-container {
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, rgba(14, 165, 233, 0.16), transparent 28%),
+              radial-gradient(circle at bottom right, rgba(34, 197, 94, 0.12), transparent 28%),
+              #07121f;
+  color: #eef2ff;
+}
+
+.video8-hero {
+  padding: 100px 40px 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+.video8-hero::before {
+  content: '';
+  position: absolute;
+  top: -15%;
+  right: -10%;
+  width: 540px;
+  height: 540px;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.2), transparent 60%);
+  filter: blur(48px);
+}
+
+.video8-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.video8-title {
+  font-size: 3.4rem;
+  margin: 0 0 20px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #22d3ee 0%, #86efac 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.video8-subtitle {
+  font-size: 1.25rem;
+  color: rgba(238, 242, 255, 0.84);
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+
+.video8-content {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 60px 40px 120px;
+}
+
+.video8-section {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(14, 165, 233, 0.18);
+  border-radius: 24px;
+  padding: 36px;
+  margin-bottom: 48px;
+}
+
+.video8-section-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.video8-icon {
+  font-size: 2.6rem;
+}
+
+.video8-section-header h2 {
+  margin: 0;
+  color: #eef2ff;
+  font-size: 1.85rem;
+}
+
+.video8-section-content {
+  color: rgba(238, 242, 255, 0.82);
+  line-height: 1.8;
+}
+
+.video8-section-content p {
+  margin: 0 0 18px;
+  font-size: 1rem;
+}
+
+.video8-code-block,
+.video8-code-block-example {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(14, 165, 233, 0.22);
+  box-shadow: inset 0 0 0 1px rgba(56, 189, 248, 0.06);
+  padding: 18px;
+  border-radius: 12px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.92rem;
+  color: #e2e8f0;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+.video8-grid,
+.video8-benefits-grid,
+.video8-example-card {
+  display: grid;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.video8-grid,
+.video8-benefits-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.video8-grid-item,
+.video8-benefit-card,
+.video8-example-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(14, 165, 233, 0.16);
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.video8-grid-item h4,
+.video8-benefit-card h4,
+.video8-example-card h3 {
+  margin: 0 0 10px;
+  color: #7dd3fc;
+}
+
+.video8-grid-item p,
+.video8-benefit-card p,
+.video8-example-card p {
+  margin: 0;
+  color: rgba(238, 242, 255, 0.78);
+}
+
+.video8-best-practices {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.video8-best-practices li {
+  color: rgba(238, 242, 255, 0.84);
+  margin-bottom: 12px;
+  padding-left: 18px;
+  position: relative;
+}
+
+.video8-best-practices li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #22d3ee;
+}
+
+@media (max-width: 960px) {
+  .video8-grid,
+  .video8-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .video8-hero {
+    padding: 80px 20px 60px;
+  }
+
+  .video8-title {
+    font-size: 2.5rem;
+  }
+
+  .video8-content {
+    padding: 40px 20px 80px;
+  }
+}
