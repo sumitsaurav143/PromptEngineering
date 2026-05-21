@@ -10,11 +10,13 @@ import Video6 from './Video6';
 import Video7 from './Video7';
 import Video8 from './Video8';
 import Video9 from './Video9';
+import SetupGuide from './SetupGuide';
 
 const Intro = () => {
   const [expandedSection, setExpandedSection] = useState(0);
   const [expandedVideo, setExpandedVideo] = useState(null);
   const [showVideoPage, setShowVideoPage] = useState(null);
+  const [showSetupGuide, setShowSetupGuide] = useState(false);
 
   const sections = [
     {
@@ -144,7 +146,9 @@ const Intro = () => {
 
   return (
     <div className="playlist-container">
-      {showVideoPage ? (
+      {showSetupGuide ? (
+        <SetupGuide onClose={() => setShowSetupGuide(false)} />
+      ) : showVideoPage ? (
         <div className="video-page-container">
           <button 
             className="back-btn"
@@ -348,8 +352,15 @@ const Intro = () => {
             </a>
           </div>
         </div>
+        <div className="setup-button-row">
+          <button
+            className="open-setup-btn"
+            onClick={() => setShowSetupGuide(true)}
+          >
+            Open OpenAI Setup Guide
+          </button>
+        </div>
       </div>
-
       {/* What You'll Learn Section */}
       <div className="learn-section">
         <h2>What You'll Learn</h2>
